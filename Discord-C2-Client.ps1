@@ -24,7 +24,7 @@ $HideConsole = 0 # HIDE THE WINDOW - Change to 1 to hide the console window whil
 $spawnChannels = 1 # Create new channel on session start
 $InfoOnConnect = 0 # Generate client info message on session start
 
-$defaultstart = 0  # Option to start all jobs automatically upon running
+$defaultstart = 1  # Option to start all jobs automatically upon running
 if ($auto -eq 'n'){
 	$defaultstart = 0 
 }
